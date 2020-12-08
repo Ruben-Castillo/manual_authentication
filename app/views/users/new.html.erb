@@ -1,0 +1,26 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_with(model: @user, local:true) do |form| %>
+<div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder: 'Enter your name', required:true %>
+
+    <%= form.label :email %>
+    <%= form.email_field :email,  placeholder: 'Enter your email adress', required:true %>
+
+</div>
+
+<div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, placeholder: 'Enter your password', required:true %>
+</div>
+
+<div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, placeholder: 'Confirm your password', required:true %>
+</div>
+
+<%= submit_tag 'Sign in' %>
+<% end %>
+
